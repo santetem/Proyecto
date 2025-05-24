@@ -1,0 +1,51 @@
+#define papu1 2
+#define papu2 3
+#define papu3 4
+#define papu4 5
+#define papu5 6
+#define papu6 7
+#define papu7 8
+#define papu8 9
+#define papu9 10
+#define papu10 11
+
+void setup()
+{
+  pinMode(papu1 , OUTPUT);
+  pinMode(papu2 , OUTPUT);
+  pinMode(papu3 , OUTPUT);
+  pinMode(papu4 , OUTPUT);
+  pinMode(papu5 , OUTPUT);
+  pinMode(papu6 , OUTPUT);
+  pinMode(papu7 , OUTPUT);
+  pinMode(papu8 , OUTPUT);
+  pinMode(papu9 , OUTPUT);
+  pinMode(papu10 , OUTPUT);
+}
+
+void loop()
+{
+  digitalWrite(papu1 , HIGH);
+  digitalWrite(papu2 , LOW);
+  digitalWrite(papu3 , HIGH);
+  digitalWrite(papu4 , LOW);
+  digitalWrite(papu5 , HIGH);
+  digitalWrite(papu6 , LOW);
+  digitalWrite(papu7 , HIGH);
+  digitalWrite(papu8 , LOW);
+  digitalWrite(papu9 , HIGH);
+  digitalWrite(papu10 , LOW);
+  delay(500);
+  
+  digitalWrite(papu1 , LOW);
+  digitalWrite(papu2 , HIGH);
+  digitalWrite(papu3 , LOW);
+  digitalWrite(papu4 , HIGH);
+  digitalWrite(papu5 , LOW);
+  digitalWrite(papu6 , HIGH);
+  digitalWrite(papu7 , LOW);
+  digitalWrite(papu8 , HIGH);
+  digitalWrite(papu9 , LOW);
+  digitalWrite(papu10 , HIGH);
+  delay(500);
+}
