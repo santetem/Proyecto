@@ -5,7 +5,8 @@
 #define pe 13
 int NUM_PIX = 12;
 int boton = 0;
-
+ 
+int cont = digitalRead(pe);
 Adafruit_NeoPixel rings = Adafruit_NeoPixel(NUM_PIX,PIXEL,NEO_GRB + NEO_KHZ800);
 void setup()
 {
@@ -22,8 +23,6 @@ void setup()
 
 void loop()
 {
-  //boton 
-  int cont = digitalRead(pe);
   if (cont == LOW){
     boton = boton +1;
     if (boton==2){
