@@ -5,8 +5,8 @@
 #define pe 13
 int NUM_PIX = 12;
 int boton = 0;
- 
-int cont = digitalRead(pe);
+int cont;
+
 Adafruit_NeoPixel rings = Adafruit_NeoPixel(NUM_PIX,PIXEL,NEO_GRB + NEO_KHZ800);
 void setup()
 {
@@ -23,6 +23,7 @@ void setup()
 
 void loop()
 {
+ int cont = digitalRead(pe);
   if (cont == LOW){
     boton = boton +1;
     if (boton==2){
@@ -46,10 +47,10 @@ void loop()
   
   Serial.println(distancia);
   delay(300);
-  if (boton = 0){
+  if (boton == 0){
     rings.clear();
   }
-  if (boton = 1){
+  if (boton == 1){
    if (distancia > 0 && distancia <=24)
   {
     rings.clear();
