@@ -3,6 +3,7 @@
 #define eco 6
 #define PIXEL 3
 int NUM_PIX = 12;
+int boton = 0;
 
 Adafruit_NeoPixel rings = Adafruit_NeoPixel(NUM_PIX,PIXEL,NEO_GRB + NEO_KHZ800);
 void setup()
@@ -20,6 +21,16 @@ void setup()
 
 void loop()
 {
+  //boton 
+  int cont = digitalRead(13);
+  if (cont == LOW){
+    boton = boton +1;
+    if (boton==2){
+      boton = 0;
+      
+    }
+    delay(200);
+  }
   //DISTANCIA
   digitalWrite(trig, LOW);
   delayMicroseconds(2);
@@ -35,7 +46,10 @@ void loop()
   
   Serial.println(distancia);
   delay(300);
-  
+  if (boton = 0){
+    rings.clear();
+  }
+  if (boton = 1){
    if (distancia > 0 && distancia <=24)
   {
     rings.clear();
@@ -216,10 +230,5 @@ void loop()
   	rings.setPixelColor( 11  , rings.Color (255, 0 ,0));
   	rings.show();
   }
-  
-}
-  delay(tiempo);
   }
-  Serial.println(boton);
-  delay(3);
 }
