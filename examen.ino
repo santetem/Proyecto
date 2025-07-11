@@ -2,6 +2,7 @@
 #define trig 7
 #define eco 6
 #define PIXEL 3
+#p = 13
 int NUM_PIX = 12;
 int boton = 0;
 
@@ -11,7 +12,7 @@ void setup()
    pinMode( PIXEL , OUTPUT);
    pinMode(eco, INPUT);
    pinMode(trig, OUTPUT);
-   pinMode(13, INPUT);
+   pinMode(13, INPUT_PULLUP);
   
    rings.begin();
    rings.show();
