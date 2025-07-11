@@ -2,7 +2,7 @@
 #define trig 7
 #define eco 6
 #define PIXEL 3
-#p = 13
+#define pe 13
 int NUM_PIX = 12;
 int boton = 0;
 
@@ -23,7 +23,7 @@ void setup()
 void loop()
 {
   //boton 
-  int cont = digitalRead(13);
+  int cont = digitalRead(pe);
   if (cont == LOW){
     boton = boton +1;
     if (boton==2){
